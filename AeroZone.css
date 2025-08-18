@@ -1,0 +1,103 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-image: url("Images/Homepage.jpg");
+    background-color: rgb(85, 49, 5);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    image-rendering: auto;
+}
+
+#heading {
+    text-align: center;
+    font-family: "Cinzel";
+    font-size: 100px;
+}
+
+#intro{
+    margin: 0px 100px;
+    text-align: center;
+    font-family: "Cormorant Garamond";
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#h2{
+    text-align: center;
+    font-size: 60px;
+    font-family: "Bodoni Moda";
+    margin-bottom: 0px;
+    padding: 0;
+}
+#h3{
+    text-align: center;
+    font-size: 60px;
+    font-family: "Playfair Display";
+    margin-bottom: 0px;
+}
+#h4{
+    text-align: center;
+    font-size: 60px;
+    font-family: "Shrikhand";
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+.caption{
+    text-align: center;
+    margin-top: 0px;
+    }
+
+#luxe{
+    font-family: "Cormorant Garamond";
+    font-style: italic;
+    font-size: 30px;
+    
+}
+
+#flow{
+      font-family: "Lora";
+    font-style: italic;
+    font-size: 30px;
+   
+}
+
+#dash{
+     font-family: "Roboto";
+    font-style: italic;
+    font-size: 30px;
+    
+}
+.logo{
+    display: block;
+    margin-left: auto ;
+    margin-right: auto;
+    border-radius: 10px;
+    height: 150px;
+    transition: all 0.2s;
+    margin-bottom: 300px;
+}
+
+
+
+.logo:hover{
+    transform: translateY(-1em) ;  
+    border-color: black;
+    box-shadow: 0em 1em 1em -0.2em black;
+}
+
+
+#extra{
+    height: 100px;
+}
+

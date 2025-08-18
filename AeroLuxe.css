@@ -1,0 +1,96 @@
+
+      body{
+          background-image: url(/Images/Luxebg.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          min-height: 100%;
+          background-attachment: fixed;
+          margin: 0;
+          padding: 0;
+          image-rendering: auto;
+      }
+
+      .luxury-text {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 26px;
+        text-align: center;
+        color: #e5c07b;
+        overflow:hidden;
+        white-space: nowrap;
+        display: inline-block;
+        width: 0%;
+        opacity: 0;
+        animation: typingSmooth 7s ease forwards, fadeIn 7s ease forwards;
+        padding-bottom: 75px;
+      }
+
+      @keyframes typingSmooth {
+        from { width: 0%; }
+        to { width: 100%; }
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      .brand-marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: "Playfair Display", serif;
+        font-size: 24px;
+        color: #d4af37; 
+        padding-bottom: 200px;
+      }
+      .marquee{
+          display: inline-block;       
+        animation: marquee 30s linear infinite;
+      }
+
+      .brand-marquee span {
+        display: inline-block;
+        padding: 0 2rem;
+      }
+      @keyframes marquee {
+        from { transform: translateX(30%); }
+        to { transform: translateX(-100%); }
+      }
+
+      .sites {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 1000px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .brand-item {
+        flex: 0 1 calc(33.333% - 2em);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 3em;
+        
+      }
+
+      .sites img {
+        width: 300px;
+        height: 300px;
+        border: 2px solid #d4af37;
+        margin-bottom: 1em;
+      }
+
+      .brand-name {
+        font-family: "Playfair Display", serif;
+        font-size: 25px;
+        color: #d4af37;
+        margin: 0;
+        padding: 0;
+        word-wrap: break-word;
+      }
+    
