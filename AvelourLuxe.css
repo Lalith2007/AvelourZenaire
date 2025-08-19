@@ -1,116 +1,214 @@
+body{
+    background-image: url(/Images/Luxebg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    image-rendering: auto;
+}
 
-      body{
-          background-image: url(/Images/Luxebg.jpg);
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          min-height: 100%;
-          background-attachment: fixed;
-          margin: 0;
-          padding: 0;
-          image-rendering: auto;
-      }
+#symbol{
+    display: block;
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-      #symbol{
-        display: block;
-        width: 500px;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-        
-      
+.luxury-text {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 26px;
+    text-align: center;
+    color: #e5c07b;
+    overflow:hidden;
+    white-space: nowrap;
+    display: inline-block;
+    width: 0%;
+    opacity: 0;
+    animation: typingSmooth 7s ease forwards, fadeIn 7s ease forwards;
+    padding-bottom: 75px;
+}
 
-      .luxury-text {
-        font-family: "Cormorant Garamond", serif;
-        font-style: italic;
-        font-size: 26px;
-        text-align: center;
-        color: #e5c07b;
-        overflow:hidden;
-        white-space: nowrap;
-        display: inline-block;
-        width: 0%;
-        opacity: 0;
-        animation: typingSmooth 7s ease forwards, fadeIn 7s ease forwards;
-        padding-bottom: 75px;
-      }
+@keyframes typingSmooth {
+    from { width: 0%; }
+    to { width: 100%; }
+}
 
-      @keyframes typingSmooth {
-        from { width: 0%; }
-        to { width: 100%; }
-      }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
+.brand-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    color: #d4af37; 
+    padding-bottom: 200px;
+}
 
-      .brand-marquee {
-        overflow: hidden;
-        white-space: nowrap;
-        font-family: "Playfair Display", serif;
-        font-size: 24px;
-        color: #d4af37; 
-        padding-bottom: 200px;
-      }
-      .marquee{
-        font-style:italic;
-        display: inline-block;       
-        animation: marquee 30s linear infinite;
-      }
+.marquee{
+    font-style:italic;
+    display: inline-block;       
+    animation: marquee 30s linear infinite;
+}
 
-      .brand-marquee span {
-        display: inline-block;
-        padding: 0 2rem;
-      }
-      @keyframes marquee {
-        from { transform: translateX(30%); }
-        to { transform: translateX(-100%); }
-      }
+.brand-marquee span {
+    display: inline-block;
+    padding: 0 2rem;
+}
 
-      .sites {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2em;
-        margin-bottom: 1000px;
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-      }
+@keyframes marquee {
+    from { transform: translateX(30%); }
+    to { transform: translateX(-100%); }
+}
 
-      .brand-item {
-        flex: 0 1 calc(33.333% - 2em);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding-bottom: 3em;
-        
-      }
+.sites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 1000px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-      .sites img {
-        width: 300px;
-        height: 300px;
-        border: 2px solid #d4af37;
-        margin-bottom: 1em;
-        transition: all 0.3s ease;
-      }
+.brand-item {
+    flex: 0 1 calc(33.333% - 2em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 3em;
+}
 
-      
-      .sites img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 25px #d4af37;
-      }
+.sites img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #d4af37;
+    margin-bottom: 1em;
+    transition: all 0.3s ease;
+}
 
-      .brand-name {
-        font-family: "Playfair Display", serif;
-        font-size: 25px;
-        color: #d4af37;
-        margin: 0;
-        padding: 0;
-        word-wrap: break-word;
-        font-style: italic;
-      }
+.sites img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px #d4af37;
+}
+
+.brand-name {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    color: #d4af37;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    font-style: italic;
+}
+
+/* =============== MOBILE RESPONSIVE DESIGN =============== */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    #symbol {
+        width: 400px;
+        height: 240px;
+    }
     
+    .luxury-text {
+        font-size: 22px;
+        padding-bottom: 60px;
+    }
+    
+    .brand-marquee {
+        font-size: 20px;
+        padding-bottom: 150px;
+    }
+    
+    .brand-item {
+        flex: 0 1 calc(50% - 2em);
+    }
+    
+    .sites img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .brand-name {
+        font-size: 22px;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    #symbol {
+        width: 300px;
+        height: 180px;
+    }
+    
+    .luxury-text {
+        font-size: 20px;
+        padding-bottom: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .brand-marquee {
+        font-size: 18px;
+        padding-bottom: 100px;
+    }
+    
+    .brand-marquee span {
+        padding: 0 1.5rem;
+    }
+    
+    .sites {
+        gap: 1.5em;
+        margin-bottom: 500px;
+        padding: 0 15px;
+    }
+    
+    .brand-item {
+        flex: 0 1 calc(100% - 1.5em);
+        padding-bottom: 2em;
+    }
+    
+    .sites img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .brand-name {
+        font-size: 20px;
+    }
+}
+
+/* Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    #symbol {
+        width: 250px;
+        height: 150px;
+    }
+    
+    .luxury-text {
+        font-size: 18px;
+    }
+    
+    .brand-marquee {
+        font-size: 16px;
+    }
+    
+    .sites img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .brand-name {
+        font-size: 18px;
+    }
+}

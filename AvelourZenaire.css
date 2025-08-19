@@ -4,7 +4,6 @@ html,body{
     padding: 0;
 }
 
-
 body{
     background-image: url("Images/Homepage.jpg");
     background-color: rgb(85, 49, 5);
@@ -17,9 +16,11 @@ body{
     padding: 0;
     image-rendering: auto;
 }
+
 #index{
     text-decoration: none;
 }
+
 #heading {
     text-align: center;
     font-family: "Cinzel";
@@ -42,12 +43,14 @@ body{
     margin-bottom: 0px;
     padding: 0;
 }
+
 #h3{
     text-align: center;
     font-size: 60px;
     font-family: "Playfair Display";
     margin-bottom: 0px;
 }
+
 #h4{
     text-align: center;
     font-size: 60px;
@@ -59,28 +62,26 @@ body{
 .caption{
     text-align: center;
     margin-top: 0px;
-    }
+}
 
 #luxe{
     font-family: "Cormorant Garamond";
     font-style: italic;
     font-size: 30px;
-    
 }
 
 #flow{
-      font-family: "Lora";
+    font-family: "Lora";
     font-style: italic;
     font-size: 30px;
-   
 }
 
 #dash{
-     font-family: "Roboto";
+    font-family: "Roboto";
     font-style: italic;
     font-size: 30px;
-    
 }
+
 .logo{
     display: block;
     margin-left: auto ;
@@ -93,16 +94,140 @@ body{
     height: 250px;
 }
 
-
-
 .logo:hover{
     transform: translateY(-1em) ;  
     border-color: black;
     box-shadow: 0em 1em 1em -0.2em #e5c07b;
 }
 
-
 #extra{
     height: 100px;
 }
 
+/* =============== MOBILE RESPONSIVE DESIGN =============== */
+
+@media (max-width: 768px) {
+    #heading {
+        font-size: 60px;
+    }
+    
+    #intro{
+        margin: 0px 50px;
+        font-size: 18px;
+    }
+    
+    #h2{
+        font-size: 40px;
+    }
+    
+    #h3{
+        font-size: 40px;
+    }
+    
+    #h4{
+        font-size: 40px;
+    }
+    
+    #luxe{
+        font-size: 24px;
+    }
+    
+    #flow{
+        font-size: 24px;
+    }
+    
+    #dash{
+        font-size: 24px;
+    }
+    
+    .logo{
+        width: 400px;
+        height: 200px;
+        margin-bottom: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    #heading {
+        font-size: 40px;
+    }
+    
+    #intro{
+        margin: 0px 20px;
+        font-size: 16px;
+    }
+    
+    #h2{
+        font-size: 30px;
+    }
+    
+    #h3{
+        font-size: 30px;
+    }
+    
+    #h4{
+        font-size: 30px;
+    }
+    
+    #luxe{
+        font-size: 20px;
+    }
+    
+    #flow{
+        font-size: 20px;
+    }
+    
+    #dash{
+        font-size: 20px;
+    }
+    
+    .logo{
+        width: 300px;
+        height: 150px;
+        margin-bottom: 150px;
+    }
+    
+    #extra{
+        height: 50px;
+    }
+}
+
+@media (max-width: 360px) {
+    #heading {
+        font-size: 35px;
+    }
+    
+    #intro{
+        margin: 0px 15px;
+        font-size: 14px;
+    }
+    
+    #h2{
+        font-size: 25px;
+    }
+    
+    #h3{
+        font-size: 25px;
+    }
+    
+    #h4{
+        font-size: 25px;
+    }
+    
+    #luxe{
+        font-size: 18px;
+    }
+    
+    #flow{
+        font-size: 18px;
+    }
+    
+    #dash{
+        font-size: 18px;
+    }
+    
+    .logo{
+        width: 250px;
+        height: 125px;
+    }
+}
