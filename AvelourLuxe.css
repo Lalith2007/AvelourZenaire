@@ -11,8 +11,19 @@
           image-rendering: auto;
       }
 
+      #symbol{
+        display: block;
+        width: 500px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+        
+      
+
       .luxury-text {
         font-family: "Cormorant Garamond", serif;
+        font-style: italic;
         font-size: 26px;
         text-align: center;
         color: #e5c07b;
@@ -44,7 +55,8 @@
         padding-bottom: 200px;
       }
       .marquee{
-          display: inline-block;       
+        font-style:italic;
+        display: inline-block;       
         animation: marquee 30s linear infinite;
       }
 
@@ -92,5 +104,6 @@
         margin: 0;
         padding: 0;
         word-wrap: break-word;
+        font-style: italic;
       }
     
