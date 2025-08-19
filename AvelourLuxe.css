@@ -95,6 +95,13 @@
         height: 300px;
         border: 2px solid #d4af37;
         margin-bottom: 1em;
+        transition: all 0.3s ease;
+      }
+
+      
+      .sites img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px #d4af37;
       }
 
       .brand-name {
