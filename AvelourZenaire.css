@@ -1,233 +1,123 @@
-html,body{
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-body{
+body {
     background-image: url("Images/Homepage.jpg");
     background-color: rgb(85, 49, 5);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
-    background-attachment: fixed;
+    background-attachment: scroll; 
     margin: 0;
     padding: 0;
     image-rendering: auto;
 }
 
-#index{
+@media (min-width: 768px) {
+    body {
+        background-attachment: fixed;
+    }
+}
+
+#index {
     text-decoration: none;
 }
 
 #heading {
     text-align: center;
-    font-family: "Cinzel";
-    font-size: 100px;
+    font-family: "Cinzel", serif;
+    font-size: clamp(28px, 8vw, 100px);
     color: black;
+    padding: 0 5vw;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.1;
 }
 
-#intro{
-    margin: 0px 100px;
+#intro {
+    margin: 0 5vw;
     text-align: center;
-    font-family: "Cormorant Garamond";
-    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(14px, 3vw, 20px);
     font-weight: 900;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    padding: 0 2vw;
 }
 
-#h2{
+#h2, #h3, #h4 {
     text-align: center;
-    font-size: 60px;
-    font-family: "Bodoni Moda";
-    margin-bottom: 0px;
-    padding: 0;
+    font-size: clamp(20px, 6vw, 60px);
+    margin-bottom: 0;
+    padding: 0 3vw;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
 }
 
-#h3{
+#h2 {
+    font-family: "Bodoni Moda", serif;
+}
+
+#h3 {
+    font-family: "Playfair Display", serif;
+}
+
+#h4 {
+    font-family: "Shrikhand", serif;
+    
+}
+
+.caption {
     text-align: center;
-    font-size: 60px;
-    font-family: "Playfair Display";
-    margin-bottom: 0px;
+    margin-top: 0;
+    padding: 0 3vw;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-#h4{
-    text-align: center;
-    font-size: 60px;
-    font-family: "Shrikhand";
-    font-weight: 300;
-    margin-bottom: 0px;
-}
-
-.caption{
-    text-align: center;
-    margin-top: 0px;
-}
-
-#luxe{
-    font-family: "Cormorant Garamond";
+#luxe, #flow, #dash {
     font-style: italic;
-    font-size: 30px;
+    font-size: clamp(14px, 4vw, 30px);
+    line-height: 1.3;
 }
 
-#flow{
-    font-family: "Lora";
-    font-style: italic;
-    font-size: 30px;
+#luxe {
+    font-family: "Cormorant Garamond", serif;
 }
 
-#dash{
-    font-family: "Roboto";
-    font-style: italic;
-    font-size: 30px;
+#flow {
+    font-family: "Lora", serif;
 }
 
-.logo{
+#dash {
+    font-family: "Roboto", sans-serif;
+}
+
+.logo {
     display: block;
-    margin-left: auto ;
+    margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    height: 150px;
     transition: all 0.2s;
-    margin-bottom: 300px;
-    width: 500px;
-    height: 250px;
+    margin-bottom: clamp(100px, 20vw, 300px);
+    width: min(90vw, 500px);
+    height: auto;
+    aspect-ratio: 2/1;
 }
 
-.logo:hover{
-    transform: translateY(-1em) ;  
+.logo:hover {
+    transform: translateY(-1em);
     border-color: black;
     box-shadow: 0em 1em 1em -0.2em #e5c07b;
 }
 
-#extra{
-    height: 100px;
-}
-
-/* =============== MOBILE RESPONSIVE DESIGN =============== */
-
-@media (max-width: 768px) {
-    #heading {
-        font-size: 60px;
-    }
-    
-    #intro{
-        margin: 0px 50px;
-        font-size: 18px;
-    }
-    
-    #h2{
-        font-size: 40px;
-    }
-    
-    #h3{
-        font-size: 40px;
-    }
-    
-    #h4{
-        font-size: 40px;
-    }
-    
-    #luxe{
-        font-size: 24px;
-    }
-    
-    #flow{
-        font-size: 24px;
-    }
-    
-    #dash{
-        font-size: 24px;
-    }
-    
-    .logo{
-        width: 400px;
-        height: 200px;
-        margin-bottom: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    #heading {
-        font-size: 40px;
-    }
-    
-    #intro{
-        margin: 0px 20px;
-        font-size: 16px;
-    }
-    
-    #h2{
-        font-size: 30px;
-    }
-    
-    #h3{
-        font-size: 30px;
-    }
-    
-    #h4{
-        font-size: 30px;
-    }
-    
-    #luxe{
-        font-size: 20px;
-    }
-    
-    #flow{
-        font-size: 20px;
-    }
-    
-    #dash{
-        font-size: 20px;
-    }
-    
-    .logo{
-        width: 300px;
-        height: 150px;
-        margin-bottom: 150px;
-    }
-    
-    #extra{
-        height: 50px;
-    }
-}
-
-@media (max-width: 360px) {
-    #heading {
-        font-size: 35px;
-    }
-    
-    #intro{
-        margin: 0px 15px;
-        font-size: 14px;
-    }
-    
-    #h2{
-        font-size: 25px;
-    }
-    
-    #h3{
-        font-size: 25px;
-    }
-    
-    #h4{
-        font-size: 25px;
-    }
-    
-    #luxe{
-        font-size: 18px;
-    }
-    
-    #flow{
-        font-size: 18px;
-    }
-    
-    #dash{
-        font-size: 18px;
-    }
-    
-    .logo{
-        width: 250px;
-        height: 125px;
-    }
+#extra {
+    height: clamp(30px, 10vw, 100px);
 }

@@ -1,66 +1,80 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
     background-image: url(/Images/Luxebg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100%;
-    background-attachment: fixed;
+    min-height: 100vh;
+    background-attachment: scroll; 
     margin: 0;
     padding: 0;
     image-rendering: auto;
 }
 
-#symbol{
-    display: block;
-    width: 500px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
+
+@media (min-width: 768px) {
+    body {
+        background-attachment: fixed;
+    }
 }
+
+#symbol {
+    display: block;
+    width: min(95vw, 280px); 
+    height: auto;
+    margin: 0 auto;
+}
+
 
 .luxury-text {
     font-family: "Cormorant Garamond", serif;
     font-style: italic;
-    font-size: 26px;
+    font-size: clamp(15px, 4.2vw, 26px);
     text-align: center;
     color: #e5c07b;
-    overflow:hidden;
-    white-space: nowrap;
-    display: inline-block;
-    width: 0%;
-    opacity: 0;
-    animation: typingSmooth 7s ease forwards, fadeIn 7s ease forwards;
-    padding-bottom: 75px;
-}
-
-@keyframes typingSmooth {
-    from { width: 0%; }
-    to { width: 100%; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    margin: 0 auto;
+    padding: 0 clamp(5px, 2.5vw, 40px) clamp(30px, 8vw, 75px) clamp(5px, 2.5vw, 40px);
+    line-height: clamp(1.4, 1.55, 1.6);
+    
+   
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    overflow: visible;
+    width: 100%;
+    max-width: 100%;
+    opacity: 1;
+    box-sizing: border-box;
 }
 
 .brand-marquee {
     overflow: hidden;
     white-space: nowrap;
     font-family: "Playfair Display", serif;
-    font-size: 24px;
-    color: #d4af37; 
-    padding-bottom: 200px;
+    font-size: clamp(14px, 3.8vw, 24px);
+    color: #d4af37;
+    padding-bottom: clamp(70px, 15vw, 200px);
 }
 
-.marquee{
-    font-style:italic;
-    display: inline-block;       
+.marquee {
+    font-style: italic;
+    display: inline-block;
     animation: marquee 30s linear infinite;
 }
 
 .brand-marquee span {
     display: inline-block;
-    padding: 0 2rem;
+    padding: 0 clamp(1rem, 2.5vw, 2rem);
 }
 
 @keyframes marquee {
@@ -72,26 +86,30 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2em;
-    margin-bottom: 1000px;
+    gap: clamp(1em, 3vw, 2em);
+    margin-bottom: clamp(400px, 50vw, 1000px);
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 clamp(10px, 2.5vw, 20px);
 }
 
 .brand-item {
-    flex: 0 1 calc(33.333% - 2em);
+   
+    flex: 0 1 calc(100% - clamp(1em, 3vw, 2em));
+    max-width: clamp(200px, 90vw, 350px);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-bottom: 3em;
+    padding-bottom: clamp(2em, 5vw, 3em);
+    margin: 0 auto;
 }
 
 .sites img {
-    width: 300px;
-    height: 300px;
-    border: 2px solid #d4af37;
+    width: clamp(160px, 40vw, 200px); 
+    height: clamp(160px, 40vw, 200px);
+    border: clamp(1px, 0.3vw, 2px) solid #d4af37;
     margin-bottom: 1em;
     transition: all 0.3s ease;
 }
@@ -103,112 +121,137 @@ body{
 
 .brand-name {
     font-family: "Playfair Display", serif;
-    font-size: 25px;
+    font-size: clamp(16px, 4vw, 25px);
     color: #d4af37;
     margin: 0;
     padding: 0;
     word-wrap: break-word;
+    overflow-wrap: break-word;
     font-style: italic;
 }
 
-/* =============== MOBILE RESPONSIVE DESIGN =============== */
 
-/* Tablet (768px and below) */
-@media (max-width: 768px) {
+
+
+@media (min-width: 480px) {
     #symbol {
-        width: 400px;
-        height: 240px;
-    }
-    
-    .luxury-text {
-        font-size: 22px;
-        padding-bottom: 60px;
-    }
-    
-    .brand-marquee {
-        font-size: 20px;
-        padding-bottom: 150px;
-    }
-    
-    .brand-item {
-        flex: 0 1 calc(50% - 2em);
+        width: min(90vw, 350px);
     }
     
     .sites img {
-        width: 250px;
-        height: 250px;
+        width: clamp(180px, 35vw, 220px);
+        height: clamp(180px, 35vw, 220px);
     }
     
-    .brand-name {
-        font-size: 22px;
+    .brand-item {
+        max-width: clamp(250px, 85vw, 400px);
     }
 }
 
-/* Mobile (480px and below) */
-@media (max-width: 480px) {
+
+@media (min-width: 768px) {
     #symbol {
-        width: 300px;
-        height: 180px;
+        width: min(80vw, 400px);
     }
     
     .luxury-text {
-        font-size: 20px;
-        padding-bottom: 50px;
-        padding-left: 15px;
-        padding-right: 15px;
+        
+        animation: typingSmooth 7s ease forwards, fadeIn 7s ease forwards;
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        width: 0%;
+        opacity: 0;
+    }
+    
+    @keyframes typingSmooth {
+        from { width: 0%; }
+        to { width: 100%; }
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .brand-item {
+        flex: 0 1 calc(50% - clamp(1.5em, 3vw, 2em)); 
+        max-width: none;
+    }
+    
+    .sites img {
+        width: clamp(220px, 28vw, 250px);
+        height: clamp(220px, 28vw, 250px);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    #symbol {
+        width: min(70vw, 450px);
+        height: 270px;
+    }
+    
+    .luxury-text {
+        font-size: clamp(22px, 2.4vw, 24px);
+        padding-bottom: clamp(60px, 6.5vw, 65px);
     }
     
     .brand-marquee {
-        font-size: 18px;
-        padding-bottom: 100px;
+        font-size: clamp(20px, 2.2vw, 22px);
+        padding-bottom: clamp(160px, 18vw, 180px);
     }
     
-    .brand-marquee span {
-        padding: 0 1.5rem;
+    .brand-item {
+        flex: 0 1 calc(33.333% - clamp(1.8em, 2.5vw, 2em)); 
+    }
+    
+    .sites img {
+        width: clamp(250px, 26vw, 280px);
+        height: clamp(250px, 26vw, 280px);
+    }
+    
+    .brand-name {
+        font-size: clamp(21px, 2.3vw, 23px);
+    }
+}
+
+
+@media (min-width: 1200px) {
+    #symbol {
+        width: 500px;
+        height: 300px;
+    }
+    
+    .luxury-text {
+        font-size: 26px;
+        padding-bottom: 75px;
+    }
+    
+    .brand-marquee {
+        font-size: 24px;
+        padding-bottom: 200px;
     }
     
     .sites {
-        gap: 1.5em;
-        margin-bottom: 500px;
-        padding: 0 15px;
-    }
-    
-    .brand-item {
-        flex: 0 1 calc(100% - 1.5em);
-        padding-bottom: 2em;
+        gap: 2em;
+        margin-bottom: 1000px;
     }
     
     .sites img {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
+        border-width: 2px;
     }
     
     .brand-name {
-        font-size: 20px;
+        font-size: 25px;
     }
 }
 
-/* Small Mobile (360px and below) */
-@media (max-width: 360px) {
-    #symbol {
-        width: 250px;
-        height: 150px;
-    }
-    
-    .luxury-text {
-        font-size: 18px;
-    }
-    
-    .brand-marquee {
-        font-size: 16px;
-    }
-    
-    .sites img {
-        width: 180px;
-        height: 180px;
-    }
-    
-    .brand-name {
-        font-size: 18px;
+
+@media (min-width: 1400px) {
+    .brand-marquee span {
+        padding: 0 2rem;
     }
 }
