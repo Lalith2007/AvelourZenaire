@@ -5,26 +5,23 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Fixed background div for Android compatibility */
-.bg-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+body {
     background-image: url("Images/Homepage.jpg");
     background-color: rgb(85, 49, 5);
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
-}
-
-body {
-    background: transparent;
+    min-height: 100%;
+    background-attachment: scroll; 
     margin: 0;
     padding: 0;
-    position: relative;
+    image-rendering: auto;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-attachment: fixed;
+    }
 }
 
 #index {
@@ -74,6 +71,7 @@ body {
 
 #h4 {
     font-family: "Shrikhand", serif;
+    
 }
 
 .caption {
