@@ -16,6 +16,7 @@ body {
     background-size: cover;
     font-family: "Cinzel", serif;
     line-height: 1.6;
+    background-attachment: fixed;
 }
 
 
